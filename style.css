@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Mulish:ital,wght@0,200;0,300;0,400;0,700;1,200;1,300;1,600;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+body {
+  background: #FF0099;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #493240, #FF0099);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #493240, #FF0099);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  overflow: hidden;
+}
+
+.wrapper {
+  max-width: 405px;
+  margin: 135px auto;
+  background: aliceblue;
+  border-radius: 30px;
+  padding: 28px 0;
+}
+
+.task-input {
+  height: 52px;
+  padding: 0 25px;
+  position: relative;
+}
+
+.task-input ion-icon {
+  position: absolute;
+  top: 50%;
+  transform: translate(17px, -50%);
+}
+
+.task-input input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 30px;
+  font-family: 'Beau Rivage', cursive;
+  font-weight: 1000;
+  border-radius: 25px;
+  border: solid 1px gray;
+  padding: 0 20px 0 50px;
+}
+
+.task-input input::placeholder {
+  color: gray;
+}
+
+.controls {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding: 18px 25px;
+  border-bottom: 1px solid gray;
+
+}
+
+.controls,
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.controls .clear-btn {
+  outline: none;
+  border: none;
+  color: aliceblue;
+  font-weight: 500;
+  font-size: 13px;
+  padding: 7px 13px;
+  background: #ee9ca7;
+  border-radius: 4px;
+  cursor: pointer;
+  background: #FF0099;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #493240, #FF0099);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #493240, #FF0099);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  box-shadow: 1px 1px 2px 1px #493240;
+}
+
+.filters span {
+  margin: 0 18px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.filters span:first-child {
+  margin: 0;
+}
+
+.filters span.active {
+  color: #FF0099;
+}
+
+.task-box {
+  margin: 20px 25px;
+  list-style: none;
+}
+
+.task-box .task {
+  font-size: 19px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-bottom: 18px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid black;
+}
+
+.task-box .task:last-child {
+  margin-bottom: 0;
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.task-box label {
+  display: flex;
+}
+
+.task label p.checked {
+  text-decoration: line-through red;
+}
+
+.task label input {
+  margin-top: 9px;
+  margin-right: 12px;
+}
+
+.task .settings {
+  cursor: pointer;
+  position: relative;
+}
+
+.settings .task-menu {
+  background: aliceblue;
+  box-shadow: 0 0 5px black;
+  padding: 2px 0;
+  right: -5px;
+  bottom: -65px;
+  transform: scale(0);
+  border-radius: 5px;
+  position: absolute;
+  transition: 0.3s ease;
+  transform-origin: top right;
+  z-index: 5;
+}
+
+.settings .task-menu.show {
+  transform: scale(1);
+}
+
+.task-menu li {
+  height: 25px;
+  padding: 17px 15px;
+  font-size: 15px;
+  margin-bottom: 0;
+  justify-content: flex-start;
+}
+
+.task-menu li:last-child {
+  margin-bottom: 0;
+}
+
+.task-menu li:hover {
+  background: gainsboro;
+}
+
+.task-menu li i {
+  padding-left: 8px;
+}
